@@ -18,3 +18,19 @@ Use the Remora Scripting Language to define Events.
             </param>
         </event>
     </events>
+    
+# How to Install
+
+1. Define your database settings [MySQL 5+](http://www.mysql.com) in 
+    config/settings.php
+    
+2. Run the install command from the Remora directory
+    php bin/install.php
+    
+
+# If you have any questions or would like to contribute contact robby[at]missionsolutions[dot-com]
+
+Thanks!
+~ Sap
+
+    
