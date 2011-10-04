@@ -6,18 +6,17 @@ Remora is a .js script file that publishes page loading activity to a server (wr
 ### How to include the Remora Tag
     <script language="JavaScript" src="http://path/to/remora.js" />
     
-### Define Events in Remora
-Use the Remora Scripting Language to define Events.
+### Define event handlers to process offline data
+Use the Remora Scripting Language to define asynchronous occurrences of events
 
-    <events>
-        <event>
-            <uri-match>/checkout</uri-match>
-            <event-handler>CheckoutHandler</event-handler>
-            <params>
-                <param key="key1">value1</param>
-            </param>
-        </event>
-    </events>
+<event-rule name="Record Product Views">
+    <!-- checks asynchronously for matches -->
+    <uri-like>products/*</uri-like>
+
+    <!-- calls an event-handler class -->
+    <call>eventhandler_onProductLoad</call>
+</event-rule>
+
     
 # How to Install
 
