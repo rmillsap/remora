@@ -17,7 +17,7 @@ function create_visitor() {
 }
 
 // CREATE an EVENT
-function create_event($visitor_id) {
+function create_event($visitor_id, $curr_url, $refr_url) {
     $mysqli = db_connect();    
     
 
@@ -26,8 +26,12 @@ function create_event($visitor_id) {
         $uri = substr($uri, 0, strpos($uri, '?'));
     }
 
-    $sql = "INSERT INTO event (visitor_id, server_host, server_uri, querystring, is_get_request, page_load_millis, page_size_bytes)"
-    . " VALUES ($visitor_id, '".$_SERVER['SERVER_NAME']."','".$uri."','".$_SERVER['QUERY_STRING']."', ". ($_SERVER['REQUEST_METHOD'] == "GET" ? 1 : 0) .", 0, 0)";
+    $sql = "INSERT INTO event (visitor_id, server_host, server_uri, querystring, is_get_request, page_load_millis, page_size_bytes, referring_url)"
+                . " VALUES ( "
+                . $visitor_id           .","
+                . q($curr_url["host"])  .","
+                . q($curr_url["path"])  .","
+                . q($curr_url["query"]) .", 1, 0, 0, ". q($refr_url) .")";
     
     // insert
     $mysqli->query( $sql );
@@ -68,5 +72,9 @@ function print_info($message) {
 function print_error($message) {
     print "\n\033[01;31m REMORA >> $message \033[0m\n\n";
 }
-    
+
+function q($value) {
+        return "'$value'";
+}
+
 ?>

@@ -1,6 +1,6 @@
 <?php 
-    require_once '../config/settings.php';
-    require_once '../lib/lib.php';
+    require_once 'settings.php';
+    require_once 'lib.php';
 
     // 1. Expire cookie in 90 days
     $expire  = time()+60*60*24*90;
@@ -18,7 +18,11 @@
     }
     
     // track the event
-    create_event($visitor_id);
+    $curr_url = parse_url( urldecode( $_REQUEST["current"] ) );
+    $refr_url = urldecode( $_REQUEST["referrer"] );
+
+
+    create_event($visitor_id, $curr_url, $refr_url);
 
     print "visitorid=$visitor_id\n";
 
