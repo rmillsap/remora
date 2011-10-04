@@ -1,7 +1,7 @@
 <?php
 
-include_once 'config/settings.php';
-include_once 'lib/lib.php';
+include_once 'remora/settings.php';
+include_once 'remora/lib.php';
 
 print_info("Installing Remora Version ".VERSION);
 

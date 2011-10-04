@@ -2,7 +2,10 @@
     <body>
         <h1>Welcome to my world!</h1>
         
-        <script type="text/javascript" src="/script/remora.js"></script>
-        
+        <img src="/remora/remora.php" width="1" height="1" />
+
+        What's up buttercup?
+
     </body>
 </html>
+
