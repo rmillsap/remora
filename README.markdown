@@ -9,13 +9,13 @@ Remora is a .js script file that publishes page loading activity to a server (wr
 ### Define event handlers to process offline data
 Use the Remora Scripting Language to define asynchronous occurrences of events
 
-<event-rule name="Record Product Views">
-    <!-- checks asynchronously for matches -->
-    <uri-like>products/*</uri-like>
+    <event-rule name="Record Product Views">
+        <!-- checks asynchronously for matches -->
+        <uri-like>products/*</uri-like>
 
-    <!-- calls an event-handler class -->
-    <call>eventhandler_onProductLoad</call>
-</event-rule>
+        <!-- calls an event-handler class -->
+        <call>eventhandler_onProductLoad</call>
+    </event-rule>
 
     
 # How to Install
