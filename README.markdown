@@ -4,7 +4,7 @@
 Remora is a .js script file that publishes page loading activity to a server (written in PHP) for processing of asynchronous events.  
 
 ### How to include the Remora Tag
-    <script language="JavaScript" src="http://path/to/remora.js" />
+    <script language="JavaScript" src="http://path/to/remore/remora.js" />
     
 ### Define event handlers to process offline data
 Use the Remora Scripting Language to define asynchronous occurrences of events

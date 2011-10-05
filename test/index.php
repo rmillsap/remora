@@ -7,10 +7,6 @@
         What's up buttercup?
 
         <script type="text/javascript" src="/remora/remora.js">
-            //alert(location.hostname);
-            //alert(location.pathname);
-            //alert(location.search);
-            //alert(document.referrer.hostname)/;
         </script>
 
 
